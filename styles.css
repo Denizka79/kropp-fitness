@@ -578,17 +578,95 @@
   align-items: center;
   row-gap: 32px;
   padding-top: var(--trainingTypesItemBgIconSize);
-  background: url('./icons/transparent-arrow-bottom-left.svg') 100% 0/var(--tr) no-repeat;
+  background: url('./icons/transparent-arrow-bottom-left.svg') 100% 0/var(--trainingTypesItemBgIconSize) no-repeat;
  }
 
  .training-types-item-title {
   font-size: 16px;
  }
 
+ .join-us-video-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 150px 30px;
+  background: url('images/join-us-bg.jpg') center/cover no-repeat var(--color-dark-alternate);
+ }
+
+ .join-us-video-play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 4px;
+  width: 200px;
+  aspect-ratio: 1;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-light);
+  background-color: transparent;
+  border: var(--border);
+  border-radius: 50%;
+ }
+
+ .join-us-video-play-button::after {
+  content: '';
+  width: 26px;
+  aspect-ratio: 1;
+  background: url('icons/arrow-top-right.svg') center/contain no-repeat;
+  transition-duration: var(--transition-duration);
+ }
+
+ .join-us-video-play-button:hover {
+  color: var(--color-dark);
+  background-color: var(--color-light-gray);
+ }
+
+ .join-us-video-play-button:hover::after {
+  filter: invert(1);
+ }
+
+ .join-us-body {
+  padding-bottom: 150px;
+ }
+
+ .join-us-title {
+  margin-top: -0.4em;
+  position: relative;
+  font-size: clamp(64px, 9.37vw, 180px);
+  line-height: 1;
+  text-align: center;
+ }
+
+ .join-us-title::after {
+  content: '';
+  display: inline-block;
+  height: 0.7em;
+  aspect-ratio: 1;
+  margin-left: 0.14em;
+  background: url('icons/bold-arrow-down-right.svg') center/contain no-repeat;
+  scale: 1 -1;
+ }
+
+ .join-us-title:not(:last-child) {
+  margin-bottom: 130px;
+ }
+
  @media (max-width: 1919px) {
 
   .motivation-card-image {
     margin-block: -20px;
+  }
+ }
+
+ @media (max-width: 1280px) {
+  .training-types-list {
+    grid-template-columns: repeat(3, 1fr);
   }
  }
 
@@ -674,6 +752,20 @@
 
   .motivation-card-description {
     margin-bottom: 20px;
+  }
+
+  .training-types-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .training-types-item {
+    --trainingTypesItemBgIconSize: 50px;
+    row-gap: 10px;
+  }
+
+  .training-types-img {
+
   }
 
  }
