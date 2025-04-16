@@ -282,6 +282,11 @@
   padding-inline: var(--container-padding-x);
  }
 
+ .container-wide {
+  max-width: 1920px;
+  margin-inline: auto;
+ }
+
  .visually-hidden {
   position: absolute;
   width: 1px;
@@ -618,6 +623,10 @@
 
  .training-types-item-title {
   font-size: 16px;
+ }
+
+ .join-us {
+  background-color: var(--color-dark-alternate);
  }
 
  .join-us-video-wrapper {
