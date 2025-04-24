@@ -189,12 +189,50 @@
                             <input type="number" class="calculate-input input" id="weight" placeholder="Weight / kg">
                             <label class="visually-hidden" for="age">Age</label>
                             <input type="number" class="calculate-input input" id="age" placeholder="Age">
+                            <label class="visually-hidden" for="gender">Gender</label>
+                            <select id="gender" class="calculate-input input">
+                                <option value="" selected disabled>Gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                            <label class="visually-hidden" for="activity-factor">Activity Factor</label>
+                                <select id="activity-factor" class="calculate-input input wide">
+                                    <option value="" selected disabled>Select an activity factor</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                </select>
                         </div>
                         <button class="calculate-button button transparent" type="submit"></button>
                     </form>
                 </div>
                 <div class="calculate-table-wrapper">
-                    
+                    <table class="calculate-table">
+                        <thead>
+                            <tr>
+                                <th>BMI</th>
+                                <th>Weight status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Below 18.5</td>
+                                <td>Underweight</td>
+                            </tr>
+                            <tr>
+                                <td>18.5 - 24.9</td>
+                                <td>Healthy</td>
+                            </tr>
+                            <tr>
+                                <td>25.0 - 29.9</td>
+                                <td>Overweight</td>
+                            </tr>
+                            <tr>
+                                <td>30.0 - and Above</td>
+                                <td>Obese</td>
+                            </tr>
+                        </tbody>
+                        <tfoot></tfoot>
+                    </table>
                 </div>
             </div>
         </section>
